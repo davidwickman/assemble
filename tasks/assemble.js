@@ -357,7 +357,7 @@ module.exports = function(grunt) {
         function(stepDone){
           grunt.verbose.writeln('Information compiled');
 
-          assemble.options.pages = collection.sort(assemble.options.collections.pages).items[0].pages;
+          assemble.options.pages = assemble.options.collections.pages.items[0].pages;
           _(assemble.options.collections).forEach(function(item, key) {
             if(key !== 'pages') {
               assemble.options[key] = collection.sort(item).items;
